@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import LoginForm from "../../components/LoginForm";
-import { Wrapper, Button, Div } from "./styles";
+import { Wrapper, Button } from "./styles";
 import { useNavigate } from "react-router-dom";
 import { storeUser } from "../../store/users/actions";
 
