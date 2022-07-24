@@ -5,7 +5,7 @@ import {
 } from "./actionTypes";
 
 const initialState = {
-  isLoadingAnimals: false,
+  isLoadingAnimals: true,
   animals: [],
 };
 

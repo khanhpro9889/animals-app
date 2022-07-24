@@ -37,14 +37,15 @@ export default function Animal() {
 
   //effect waiting for animals fetch completely then do pagination
   useEffect(() => {
-    if (animals.length > 0) {
+    if (!isLoadingAnimals) {
       //pagination first load
       const page = parseInt(pageParams.get("page")) || 1; //not have query page or query page NaN then page = 1
-      setCurrentPage(page);
       const total = Math.ceil(animals.length / perPageInitial);
+
       setTotalPage(total);
 
       if (page > total) {
+        setCurrentPage(total);
         navigate({
           pathname: ANIMALS_PATH,
           search: `?page=${total}`,
@@ -52,16 +53,18 @@ export default function Animal() {
         const afterPagination = handlePagination(animals, total);
         setAnimalPagination(afterPagination);
       } else if (page < 1) {
+        setCurrentPage(1);
         navigate(ANIMALS_PATH);
         const afterPagination = handlePagination(animals, 1);
         setAnimalPagination(afterPagination);
       } else {
+        setCurrentPage(page);
         const afterPagination = handlePagination(animals, page);
         setAnimalPagination(afterPagination);
       }
     }
     // eslint-disable-next-line
-  }, [animals]);
+  }, [isLoadingAnimals]);
 
   //effect change page in pagination
   useEffect(() => {
