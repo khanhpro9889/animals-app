@@ -105,7 +105,7 @@ export default function Animal() {
           return <AnimalItem key={item.id} animal={item} />;
         })
       )}
-      {totalPage > 1 && (
+      {!isLoadingAnimals && totalPage > 1 && (
         <Pagination
           totalPage={totalPage}
           currentPage={currentPage}

@@ -13,5 +13,6 @@ export const Flex = Styled.div`
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background: #eee3e7 ;
+    background: #eee3e7;
+    min-height: 500px;
 `;
