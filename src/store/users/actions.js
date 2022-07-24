@@ -56,6 +56,8 @@ export const getUserProfile = () => {
       } catch (error) {
         dispatch(fetchUserFailure());
       }
+    } else {
+      dispatch(fetchUserFailure());
     }
   };
 };

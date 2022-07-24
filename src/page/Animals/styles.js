@@ -25,3 +25,7 @@ export const BackButton = Styled.button`
     top: 0px;
     right: 0px;
 `;
+
+export const Alert = Styled.h3`
+    text-align:center;
+`;

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Title, Wrapper, BackButton } from "./styles";
+import { Title, Wrapper, BackButton, Alert } from "./styles";
 import AnimalItem from "../../components/AnimalItem";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAnimals } from "../../store/animals/actions";
@@ -20,6 +20,9 @@ export default function Animal() {
   const navigate = useNavigate();
   const [animalPagination, setAnimalPagination] = useState([]);
   const animals = useSelector(({ AnimalReducer }) => AnimalReducer.animals);
+  const isLoadingAnimals = useSelector(
+    ({ AnimalReducer }) => AnimalReducer.isLoadingAnimals
+  );
   const dispatch = useDispatch();
   // eslint-disable-next-line
   const [pageParams, setPageParams] = useSearchParams();
@@ -90,9 +93,15 @@ export default function Animal() {
       <BackButton onClick={() => navigate(HOME_PATH, { replace: true })}>
         X
       </BackButton>
-      {animalPagination.map((item) => {
-        return <AnimalItem key={item.id} animal={item} />;
-      })}
+      {isLoadingAnimals ? (
+        <Alert>Loading...</Alert>
+      ) : animalPagination.length === 0 ? (
+        <Alert>No animals anymore!!</Alert>
+      ) : (
+        animalPagination.map((item) => {
+          return <AnimalItem key={item.id} animal={item} />;
+        })
+      )}
       {totalPage > 1 && (
         <Pagination
           totalPage={totalPage}

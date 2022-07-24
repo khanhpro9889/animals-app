@@ -8,7 +8,7 @@ import {
 
 const initialState = {
   user: null,
-  isLoadingUser: false,
+  isLoadingUser: true,
 };
 
 export const Reducer = (state = initialState, action) => {
