@@ -3,7 +3,6 @@ import { Wrapper, Button, Flex } from "./styles";
 import PropTypes from "prop-types";
 
 export default function Pagination({ totalPage, currentPage, onChangePage }) {
-  console.log(currentPage);
   return (
     <Wrapper>
       <Flex>
