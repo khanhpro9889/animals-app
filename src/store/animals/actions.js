@@ -27,7 +27,9 @@ export const fetchAnimals = () => {
   return async (dispatch) => {
     try {
       dispatch(getAllAnimals());
-      const res = await fetch(`http://localhost:3000/animals`);
+      const res = await fetch(
+        `https://animals-json-server.herokuapp.com/animals`
+      );
       const animals = await res.json();
       dispatch(getAllAnimalsSuccess(animals));
     } catch (error) {

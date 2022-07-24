@@ -45,7 +45,9 @@ export const getUserProfile = () => {
       try {
         dispatch(fetchUser());
         const res = await fetch(
-          `http://localhost:3000/users/${localStorage.getItem("id")}`
+          `https://animals-json-server.herokuapp.com/users/${localStorage.getItem(
+            "id"
+          )}`
         );
         const user = await res.json();
         if (user) {

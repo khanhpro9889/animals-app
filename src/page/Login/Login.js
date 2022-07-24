@@ -9,7 +9,9 @@ export default function Login() {
   const dispatch = useDispatch();
 
   const handleSubmit = async (email, password) => {
-    const response = await fetch("http://localhost:3000/users");
+    const response = await fetch(
+      "https://animals-json-server.herokuapp.com/users"
+    );
     const usersList = await response.json();
     const finded = usersList.find(
       (user) => user.email === email && user.password === password
