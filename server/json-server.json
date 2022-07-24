@@ -1,0 +1,114 @@
+{
+    "users": [{
+        "id": 1,
+        "email": "test@example.com",
+        "name": "Peter Parker",
+        "password": "password"
+    }],
+    "animals": [
+        {
+            "id": 1,
+            "name": "Dog"
+        },
+        {
+            "id": 2,
+            "name": "Cat"
+        },
+        {
+            "id": 3,
+            "name": "Cow"
+        },
+        {
+            "id": 4,
+            "name": "Buffalo"
+        },
+        {
+            "id": 5,
+            "name": "Tiger"
+        },
+        {
+            "id": 6,
+            "name": "Lion"
+        },
+        {
+            "id": 7,
+            "name": "Cheetah"
+        },
+        {
+            "id": 8,
+            "name": "Eagle"
+        },
+        {
+            "id": 9,
+            "name": "Hawk"
+        },
+        {
+            "id": 10,
+            "name": "Duck"
+        },
+        {
+            "id": 11,
+            "name": "Chicken"
+        },
+        {
+            "id": 12,
+            "name": "Turtle"
+        },
+        {
+            "id": 13,
+            "name": "Crocodile"
+        },
+        {
+            "id": 14,
+            "name": "Dolphin"
+        },
+        {
+            "id": 15,
+            "name": "Whale"
+        },
+        {
+            "id": 16,
+            "name": "Hippo"
+        },
+        {
+            "id": 17,
+            "name": "Elephant"
+        },
+        {
+            "id": 18,
+            "name": "Giraffe"
+        },
+        {
+            "id": 19,
+            "name": "Bat"
+        },
+        {
+            "id": 20,
+            "name": "Deer"
+        },
+        {
+            "id": 21,
+            "name": "Monkey"
+        },
+        {
+            "id": 22,
+            "name": "Kangaroos"
+        },
+        {
+            "id": 23,
+            "name": "Rabbit"
+        },
+        {
+            "id": 24,
+            "name": "Mouse"
+        },
+        {
+            "id": 25,
+            "name": "Octopus"
+        },
+        {
+            "id": 26,
+            "name": "Crab"
+        }
+    ]
+}

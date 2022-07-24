@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Routers from "./page";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getUserProfile } from "./store/users/actions";
+import Loading from "./components/Loading";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const dispatch = useDispatch();
+  const userStore = useSelector(({ UserReducer }) => UserReducer);
+  useEffect(() => {
+    dispatch(getUserProfile());
+    // eslint-disable-next-line
+  }, []);
+
+  if (userStore.isLoadingUser) {
+    return <Loading />;
+  }
+
+  return <Routers />;
 }
 
 export default App;
