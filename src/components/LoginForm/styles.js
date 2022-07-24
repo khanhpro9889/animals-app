@@ -20,11 +20,12 @@ export const Input = Styled.input`
 
 export const Button = Styled.button`
     padding: 0.5rem;
-    background: #ead5dc   ;
+    color: #fff;
     border: none;
     border-radius: 5px;
     font-size: 1.5rem;
     cursor: pointer;
+    background: #f4b6c2;
 `;
 
 export const FormInput = Styled.div`

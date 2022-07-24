@@ -28,9 +28,7 @@ export default function Login() {
   return (
     <Wrapper>
       <LoginForm onSubmit={handleSubmit} />
-      <Div>
-        <Button onClick={() => navigate(-1)}>Back</Button>
-      </Div>
+      <Button onClick={() => navigate(-1, { replace: true })}>X</Button>
     </Wrapper>
   );
 }
