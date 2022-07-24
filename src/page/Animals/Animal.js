@@ -39,7 +39,7 @@ export default function Animal() {
   useEffect(() => {
     if (animals.length > 0) {
       //pagination first load
-      const page = pageParams.get("page") || 1;
+      const page = parseInt(pageParams.get("page")) || 1; //not have query page or query page NaN then page = 1
       setCurrentPage(page);
       const total = Math.ceil(animals.length / perPageInitial);
       setTotalPage(total);
@@ -63,7 +63,7 @@ export default function Animal() {
     // eslint-disable-next-line
   }, [animals]);
 
-  //effect change page
+  //effect change page in pagination
   useEffect(() => {
     if (currentPage) {
       const afterPagination = handlePagination(animals, currentPage);
