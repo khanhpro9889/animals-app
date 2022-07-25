@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { Title, Wrapper, BackButton, Alert } from "./styles";
+import { Title, Wrapper, BackButton, Alert, FlexCenter } from "./styles";
 import AnimalItem from "../../components/AnimalItem";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAnimals } from "../../store/animals/actions";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import Pagination from "../../components/Pagination";
 import { HOME_PATH, ANIMALS_PATH } from "../../constants/path";
+import { Spinner } from "../../components/LoadingSpinner/styles";
 
 const perPageInitial = 6;
 
@@ -97,7 +98,9 @@ export default function Animal() {
         X
       </BackButton>
       {isLoadingAnimals ? (
-        <Alert>Loading...</Alert>
+        <FlexCenter>
+          <Spinner />
+        </FlexCenter>
       ) : animalPagination.length === 0 ? (
         <Alert>No animals anymore!!</Alert>
       ) : (

@@ -13,6 +13,6 @@ export const Flex = Styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    color: #f6abb6;
+    color: #f4b6c2;
     background: #eec9d2;
 `;

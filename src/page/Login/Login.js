@@ -3,7 +3,7 @@ import LoginForm from "../../components/LoginForm";
 import { Wrapper, Button } from "./styles";
 import { useNavigate } from "react-router-dom";
 import { storeUser } from "../../store/users/actions";
-
+import { HOME_PATH } from "../../constants/path";
 export default function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -28,7 +28,7 @@ export default function Login() {
   return (
     <Wrapper>
       <LoginForm onSubmit={handleSubmit} />
-      <Button onClick={() => navigate(-1, { replace: true })}>X</Button>
+      <Button onClick={() => navigate(HOME_PATH, { replace: true })}>X</Button>
     </Wrapper>
   );
 }

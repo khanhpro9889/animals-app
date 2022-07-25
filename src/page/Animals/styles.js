@@ -29,3 +29,9 @@ export const BackButton = Styled.button`
 export const Alert = Styled.h3`
     text-align:center;
 `;
+
+export const FlexCenter = Styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
