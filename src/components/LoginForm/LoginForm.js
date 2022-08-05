@@ -20,6 +20,7 @@ export default function LoginForm({ onSubmit }) {
           type="email"
           name="email"
           value={email}
+          placeholder="test@example.com"
           onChange={(e) => setEmail(e.target.value)}
         />
       </FormInput>
@@ -29,6 +30,7 @@ export default function LoginForm({ onSubmit }) {
           type="password"
           name="password"
           value={password}
+          placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
         />
       </FormInput>
